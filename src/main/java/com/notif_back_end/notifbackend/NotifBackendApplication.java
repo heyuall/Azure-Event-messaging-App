@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@EnableAzureMessaging
 public class NotifBackendApplication {
 
     public static void main(String[] args) {
