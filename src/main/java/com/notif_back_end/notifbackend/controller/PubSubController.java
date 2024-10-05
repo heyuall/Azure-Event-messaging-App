@@ -2,6 +2,7 @@ package com.notif_back_end.notifbackend.controller;
 
 import com.azure.messaging.webpubsub.WebPubSubServiceClient;
 import com.notif_back_end.notifbackend.service.NotificationManagerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,8 +29,6 @@ public class PubSubController {
                                  @RequestHeader(value = "ce-userId") String id,
                                  @RequestBody String message) {
         if ("azure.webpubsub.sys.connected".equals(event)) {
-//            service.sendToAll(String.format("[SYSTEM] %s joined", id), WebPubSubContentType.TEXT_PLAIN);
-//            service.sendToUser(id, String.format("notif 1"), WebPubSubContentType.TEXT_PLAIN);
             this.notificationManagerService.connectUserAndSendPendingNotifications(id);
         } else if ("azure.webpubsub.sys.disconnected".equals(event)) {
             System.out.println("event disconnect userID: "+ id);
