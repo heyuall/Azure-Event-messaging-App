@@ -1,5 +1,7 @@
 This Spring Boot 3.2 project integrates with Azure Cloud services for notification and event handling. It utilizes Azure Cloud PubSub service for notification delivery and Azure Event Hubs service for messaging purposes acting as a queue.
 
+See My Medium article for more details: https://medium.com/@zoubeidihoussem/building-a-notification-system-with-a-messaging-queue-using-azure-cloud-services-in-a-java-spring-7927f9708ac4  
+
 **Features:**
 
 1. **Notification System with Azure Cloud PubSub:**
